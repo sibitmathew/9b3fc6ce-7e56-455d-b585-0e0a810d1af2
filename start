@@ -1,0 +1,49 @@
+<?php
+
+#!/usr/bin/env php
+
+require 'vendor/autoload.php';
+
+use ReportProcess\Reporting;
+
+
+$file_opened = false;
+
+$messages = [
+    "Student ID: ",
+    "Report to generate (1 for Diagnostic, 2 for Progress, 3 for Feedback): "
+];
+
+function prompt($message) {
+    echo $message;
+    return rtrim(fgets(STDIN));
+}
+
+echo "Welcome to Assessment Reporting System v0.0.1\n";
+//Read type of input
+echo "To exit, please use 'stop' command\n";
+echo "Please enter the following\n";
+echo "===================================================================================\n";
+
+//Get each lines of input
+foreach ($messages as $message) {
+    // Prompt for the next argument
+    $input = prompt($message);
+
+    // Check if the user wants to exit
+    if (strtolower($input) === 'stop') {
+        echo "Exiting the script...\n";
+        break; // Exit the loop
+    }
+
+    // Add the input to the array
+    $inputs[] = $input;
+}
+
+$reporting = new Reporting($inputs[0], $inputs[1]);
+$reporting->run();
+
+//Close the file
+if($file_opened) fclose($input);
+
+
