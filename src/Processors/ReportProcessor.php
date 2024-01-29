@@ -5,6 +5,7 @@ namespace ReportProcess\Processors;
 
 use DateTime;
 use Exception;
+use ReportProcess\Interfaces\ReportProcessorInterface;
 use ReportProcess\Services\StudentService;
 use ReportProcess\Services\StudentResponsesService;
 use ReportProcess\Services\QuestionsService;
@@ -14,7 +15,7 @@ use ReportProcess\Services\AssessmentService;
  * Class DiagnosticReportProcessor
  * @package ReportProcess\Processors
  */
-class ReportProcessor
+class ReportProcessor implements ReportProcessorInterface
 {
     const DIAGNOSTIC_REPORT = "1";
 
