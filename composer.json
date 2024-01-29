@@ -11,8 +11,10 @@
   ],
   "autoload": {
     "psr-4": {
-      "Test\\": "tests/",
       "ReportProcess\\": "src/"
     }
+  },
+  "require": {
+    "ext-json": "*"
   }
 }

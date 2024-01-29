@@ -57,36 +57,10 @@ Database
 1. Data stored in the memory as json as required
 
 
-To run tests
-============
-
-For tests using `phpunit7`
-
-1. Open a terminal and go to cash_process folder by `cd cash_process`
-
-2. Run `vendor/bin/phpunit tests`
-
-Note : Please make sure `cron` and `consumer` running on other terminal windows.
-
-
-To run tests with testdox
-=========================
-
-For tests using `phpunit7`
-
-1. Open a terminal and go to cash_process folder by `cd cash_process`
-
-2. Run `vendor/bin/phpunit --testdox tests`
-
-Note : Please make sure `cron` and `consumer` running on other terminal windows.
-
 Other notes
 ===========
 
-Added few test files for the file input `tests/data` folder.
-A Test database also included in `tests/data/db` folder.
 All the source code is included in src folder.
-All the test code are included on tests folder.
 
 Design considerations and standards
 ===================================
@@ -117,6 +91,10 @@ Assumptions
 
 1. It is a CLI app as the instructions clearly says not to use GUI.
 
+
+Testcases
+===========
+No testcases included due to the compatiability issues
 
 
 Developer contact details
